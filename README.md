@@ -41,6 +41,7 @@ noptrix
 
 # Notes
 
+- quick'n'dirty code
 - dnsspider is already packaged and available for [BlackArch Linux](https://www.blackarch.org/)
 - My master-branches are always dev-branches; use releases for stable versions.
 - All of my public stuff you find are officially announced and published via [nullsecurity.net](https://www.nullsecurity.net).
