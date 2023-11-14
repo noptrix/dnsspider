@@ -293,11 +293,13 @@ def attack(opts, hostname):
   try:
     x = dns.message.make_query(hostname, 1)
     if opts.protocol == 'udp':
-      a = dns.query.udp(x, opts.dnshost, float(opts.timeout), 53, None,
-        opts.ipaddr, opts.port, True, False)
+      a = dns.query.udp(x, opts.dnshost, float(opts.timeout), 53,
+        source=opts.ipaddr, source_port=opts.port, ignore_trailing=True,
+        raise_on_truncation=False)
     else:
-      a = dns.query.tcp(x, opts.dnshost, float(opts.timeout), 53, None,
-        opts.ipaddr, opts.port, False)
+      a = dns.query.udp(x, opts.dnshost, float(opts.timeout), 53,
+        source=opts.ipaddr, source_port=opts.port, ignore_trailing=True,
+        raise_on_truncation=False)
   except dns.exception.Timeout:
     sys.exit()
   except socket.error:
