@@ -17,6 +17,8 @@
 # quick'n'dirty code                                                           #
 #                                                                              #
 # CHANGELOG:                                                                   #
+# v1.4                                                                         #
+# - fix for dns.query                                                          #
 #                                                                              #
 # v1.3                                                                         #
 # - add misc files (license, requirements, etc.)                               #
@@ -106,7 +108,7 @@ except ImportError:
 BANNER = '--==[ dnsspider by nullsecurity.net ]==--'
 USAGE = '\n' \
   '  dnsspider.py -t <arg> -a <arg> [options]'
-VERSION = 'v1.3'
+VERSION = 'v1.4'
 
 defaults = {}
 hostnames = []
